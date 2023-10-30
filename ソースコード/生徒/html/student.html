@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生徒画面</title>
+    <link rel="stylesheet" href="../css/student.css">
+</head>
+<body>
+    <header>
+        <h1></h1>
+        <nav>
+            <ul>
+                <li><a href="kamokubetu.html">科目別出席率</a></li>
+                <li><a href="soutai.html">早退</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div>
+            <label class="open" for="popup"><p id="status">ステータス:欠席 </p>科目</label>
+<input type="checkbox" id="popup">
+<div class="overlay">
+	<div class="window">
+		<label class="close" for="popup">×</label>
+		<p class="text"><br><br></p>
+	</div>
+</div>
+            </div>
+       <div>
+    
+    <button id="attendanceButton">出席ボタン</button>
+
+    <script>
+        
+        var attendanceButton = document.getElementById("attendanceButton");
+
+        attendanceButton.addEventListener("click", function() {
+            var status = document.getElementById("status");
+            status.textContent = "ステータス: 出席";
+        });
+    </script>
+    </div>
+    </main>
+    
+    <footer>
+        <p></p>
+    </footer>
+</body>
+</html>
