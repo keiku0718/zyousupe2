@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link  >
+        <title>教師画面</title>
+
+        <style>
+            /* ポップアップ用のスタイル */
+            .popup {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7);
+            }
+    
+            .popup-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #fff;
+                /* 幅と高さを調整 */
+                width: 60%; /* 幅を変更 */
+                height: 90%; /* 高さを変更 */
+                padding: 20px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" onclick="location.href='shuseki.html'" value="出欠確認">
+        <input type="button" onclick="location.href='設定/setting.html'" value="設定">
+        <input type="button" onclick="location.href='jikanwari.html'" value="時間割">
+        <input type="button" onclick="location.href='subject.html'" value="科目別出席率">
+        <input type="button" value="確認ボタン" onclick="openPopup()">
+
+        <div id="myPopup" class="popup">
+            <div class="popup-content">
+                <!-- 送信ボタンをクリックで別のページに移動 -->
+                <input type="button" value="パスワード設定">
+                <input type="button" value="送信" onclick="redirectToAnotherPage()">
+            </div>
+        </div>
+
+        <script>
+            function openPopup() {
+                document.getElementById("myPopup").style.display = "block";
+            }
+    
+            function redirectToAnotherPage() {
+                window.location.href = "mihensin.html"; // 別のページのURLを指定
+            }
+        </script>
+    </body>
+</html>
