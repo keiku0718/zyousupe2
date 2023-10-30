@@ -31,27 +31,28 @@
         </style>
     </head>
     <body>
-        <input type="button" onclick="location.href='shuseki.html'" value="出欠確認">
-        <input type="button" onclick="location.href='設定/setting.html'" value="設定">
-        <input type="button" onclick="location.href='jikanwari.html'" value="時間割">
-        <input type="button" onclick="location.href='subject.html'" value="科目別出席率">
+        <input type="button" onclick="location.href='teacher_shuseki.html'" value="出欠確認">
+        <input type="button" onclick="location.href='設定/teacher_setting.html'" value="設定">
+        <input type="button" onclick="location.href='teacher_jikanwari.html'" value="時間割">
+        <input type="button" onclick="location.href='teacher_subject.html'" value="科目別出席率">
         <input type="button" value="確認ボタン" onclick="openPopup()">
 
+        <!-- ポップアップ内のボタン -->
         <div id="myPopup" class="popup">
             <div class="popup-content">
-                <!-- 送信ボタンをクリックで別のページに移動 -->
                 <input type="button" value="パスワード設定">
                 <input type="button" value="送信" onclick="redirectToAnotherPage()">
             </div>
         </div>
 
+        <!-- ポップアップ表示js -->
         <script>
             function openPopup() {
                 document.getElementById("myPopup").style.display = "block";
             }
     
             function redirectToAnotherPage() {
-                window.location.href = "mihensin.html"; // 別のページのURLを指定
+                window.location.href = "teacher_mihensin.html"; // 別のページのURLを指定
             }
         </script>
     </body>
