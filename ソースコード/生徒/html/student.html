@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>生徒画面</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/student.css">
 </head>
 <body>
     <header>
         <h1></h1>
         <nav>
             <ul>
-                <li><a href="#">科目別出席率</a></li>
-                <li><a href="#">早退</a></li>
-                <li><a href="#"></a></li>
+                <li><a href="kamokubetu.html">科目別出席率</a></li>
+                <li><a href="soutai.html">早退</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-       
-    <p id="status">ステータス:欠席 </p>
+        <div>
+            <label class="open" for="popup"><p id="status">ステータス:欠席 </p>科目</label>
+<input type="checkbox" id="popup">
+<div class="overlay">
+	<div class="window">
+		<label class="close" for="popup">×</label>
+		<p class="text"><br><br></p>
+	</div>
+</div>
+            </div>
+       <div>
+    
     <button id="attendanceButton">出席ボタン</button>
 
     <script>
@@ -32,6 +41,7 @@
             status.textContent = "ステータス: 出席";
         });
     </script>
+    </div>
     </main>
     
     <footer>
